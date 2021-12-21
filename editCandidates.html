@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <title>Activity Page</title>
+</head>
+
+
+<body class="d-flex flex-column h-100" onload="fetchCandidate()">
+
+
+
+<main role="main" class="flex-shrink-0">
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1>Edit Candidate </h1>
+        </div>
+    </div>
+</main>
+
+<div id="showCandidate">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"> <div id="candidate"></div></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td><div id="firstName"></div></td>
+        </tr>
+        <tr>
+            <td><div id="lastName"></div></td>
+        </tr>
+        <tr>
+            <td><div id="partyInitial"></div></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <button onclick="editCandidate()" class="btn btn-primary" id="edit-button">Edit candidate</button>
+</div>
+
+<div id="edit-fields" style="display: none">
+
+    <label for="firstNameInput">First name: </label>
+    <input type="text" name="firstname" id="firstNameInput"><br>
+
+    <label for="lastNameInput">Last name: </label>
+    <input type="text" name="lastName" id="lastNameInput"><br>
+
+    <label for="cpr">Cpr: </label>
+    <input type="text" name="partyId" id="cpr"><br>
+
+
+    <label for="candidatePartyinput">Add party: </label>
+    <input type="text" name="candidateParty" id="candidatePartyinput">
+    <button onclick="addParty()"id="add-button"class="btn btn-primary">Add</button><br>
+
+    <button onclick="saveCandidate()" id="save-button" class="btn btn-primary"> Save changes</button>
+    <button onclick="discardChanges()"id="discard-button" class="btn btn-primary">Discard changes and return to overview</button>
+</div>
+
+<script src="../js/editCandidate.js"></script>
+
+
+</body>
+</html>

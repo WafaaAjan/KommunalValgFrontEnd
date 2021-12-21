@@ -1,0 +1,52 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/main.css"/>
+  <title>Candidate Page</title>
+</head>
+
+
+<body class="d-flex flex-column h-100" onload="fetchCandidate()">
+
+
+
+<main role="main" class="flex-shrink-0">
+  <div class="container mt-5">
+    <div class="jumbotron">
+      <h1>Edit Candidate </h1>
+    </div>
+  </div>
+</main>
+
+<div id="showCandidate">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col"> <div id="candidate"></div></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td><div id="firstName"></div></td>
+    </tr>
+    <tr>
+      <td><div id="lastName"></div></td>
+    </tr>
+    <tr>
+      <td><div id="partyInitial"></div></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+
+<script src="../js/editCandidate.js"></script>
+
+
+</body>
+</html>
